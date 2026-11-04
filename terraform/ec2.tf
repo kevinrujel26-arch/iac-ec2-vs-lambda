@@ -72,7 +72,6 @@ resource "aws_instance" "web" {
 
   user_data = templatefile("${path.module}/user_data.sh.tpl", {
     playbook_b64 = filebase64("${path.module}/../ansible/playbook.yml")
-    index_b64    = filebase64("${path.module}/../ansible/templates/index.html.j2")
     app_env      = "dev"
   })
 
