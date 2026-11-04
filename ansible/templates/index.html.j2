@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Comparativa EC2 vs Lambda</title>
+  <style>
+    body { font-family: sans-serif; max-width: 640px; margin: 3rem auto; padding: 0 1rem; }
+    h1 { color: #232f3e; }
+    td { padding: .3rem 1rem .3rem 0; }
+    .ok { color: #1a7f37; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Servidor EC2 configurado con Ansible</h1>
+  <p class="ok">nginx instalado y activo.</p>
+  <table>
+    <tr><td>Entorno</td><td>{{ app_env }}</td></tr>
+    <tr><td>Servidor</td><td>{{ ansible_facts['hostname'] }}</td></tr>
+    <tr><td>Sistema operativo</td><td>{{ ansible_facts['distribution'] }} {{ ansible_facts['distribution_version'] }}</td></tr>
+    <tr><td>vCPU</td><td>{{ ansible_facts['processor_vcpus'] }}</td></tr>
+    <tr><td>Memoria (MB)</td><td>{{ ansible_facts['memtotal_mb'] }}</td></tr>
+    <tr><td>Configurado el</td><td>{{ ansible_facts['date_time']['iso8601'] }}</td></tr>
+  </table>
+  <p>Curso: Infraestructura como Código · Grupo 03</p>
+</body>
+</html>
