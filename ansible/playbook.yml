@@ -11,12 +11,6 @@
         name: nginx
         state: present
 
-    - name: Publicar la pagina de inicio desde una plantilla
-      ansible.builtin.template:
-        src: templates/index.html.j2
-        dest: /usr/share/nginx/html/index.html
-        mode: "0644"
-      notify: Reiniciar nginx
 
     - name: Asegurar que nginx este activo y arranque con el servidor
       ansible.builtin.service:
