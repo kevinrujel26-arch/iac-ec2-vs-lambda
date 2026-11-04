@@ -18,8 +18,7 @@ comparativa-ec2-lambda/
 │   ├── lambda.tf           # rol, log group, funcion
 │   └── outputs.tf          # URL de EC2 y comando para invocar la Lambda
 ├── ansible/
-│   ├── playbook.yml        # instala nginx, publica la pagina, deja el servicio activo
-│   └── templates/index.html.j2
+│   └── playbook.yml        # instala nginx, publica la pagina, deja el servicio activo
 └── lambda/
     └── handler.py
 ```
