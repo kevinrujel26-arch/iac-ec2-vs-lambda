@@ -1,3 +1,4 @@
+#!/bin/bash
 set -euxo pipefail
 
 dnf install -y ansible-core
